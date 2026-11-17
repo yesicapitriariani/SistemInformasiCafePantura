@@ -1,5 +1,5 @@
 /**
- * CAFE PANTURA - INTERACTIVE JAVASCRIPT
+ * KEDAI KOPI PANTURA - INTERACTIVE JAVASCRIPT
  * Full-featured: Cart, WhatsApp Checkout, Menu Filtering, Search,
  * Table Reservation, Interactive Reviews, Live Hours, and Web Audio Ambience.
  */
@@ -474,7 +474,7 @@ window.checkoutWhatsApp = function() {
   const tax = Math.round((subtotal - discount) * 0.10);
   const grandTotal = (subtotal - discount) + tax;
 
-  let message = `*HALO CAFE PANTURA, SAYA INGIN ORDER*\n`;
+  let message = `*HALO KEDAI KOPI PANTURA, SAYA INGIN ORDER*\n`;
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
   message += `👤 *Nama:* ${customerName || "Pelanggan"}\n`;
   message += `📍 *Tipe Pesanan:* ${orderType === "dine-in" ? `Dine In (Meja #${tableNo})` : "Take Away (Bungkus)"}\n`;
@@ -493,7 +493,7 @@ window.checkoutWhatsApp = function() {
   message += `*TOTAL BAYAR: ${formatRupiah(grandTotal)}*\n\n`;
   message += `Mohon diproses pesanan saya. Terima kasih! 🙏☕`;
 
-  const waNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Cafe Pantura
+  const waNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Kedai Kopi Pantura
   const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
@@ -581,7 +581,7 @@ window.handleReservationSubmit = function(event) {
   const area = form.area.value;
   const notes = form.notes.value || "-";
 
-  let waMsg = `*RESERVASI MEJA - CAFE PANTURA*\n`;
+  let waMsg = `*RESERVASI MEJA - KEDAI KOPI PANTURA*\n`;
   waMsg += `━━━━━━━━━━━━━━━━━━━━━\n`;
   waMsg += `👤 *Nama:* ${name}\n`;
   waMsg += `📞 *No WhatsApp:* ${phone}\n`;

@@ -1,2 +1,2 @@
-# SistemInformasiCafePantura
+# SistemInformasiKedaiKopiPantura
 ProjectMataKuliahCapstoneProject
