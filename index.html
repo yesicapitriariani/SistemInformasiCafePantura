@@ -53,12 +53,12 @@
 		.mobile-menu-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 		.mobile-backdrop { position: fixed; inset: 0; background: rgba(20,24,20,.25); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease; z-index: 90; }
 		.mobile-backdrop.is-open { opacity: 1; visibility: visible; }
-		.mobile-panel { position: fixed; top: 0; right: 0; z-index: 100; display: flex; flex-direction: column; width: min(78vw, 300px); height: 100vh; padding: 24px 22px 30px; background: var(--paper); border-left: 1px solid var(--line); box-shadow: -16px 0 28px rgba(23,29,24,.12); transform: translateX(120%); transition: transform .28s ease; }
+		.mobile-panel { position: fixed; top: 0; right: 0; z-index: 100; display: flex; flex-direction: column; width: min(78vw, 300px); height: 100vh; height: 100dvh; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px max(30px, env(safe-area-inset-bottom)); background: var(--paper); border-left: 1px solid var(--line); box-shadow: -16px 0 28px rgba(23,29,24,.12); transform: translateX(120%); transition: transform .28s ease; }
 		.mobile-panel.is-open { transform: translateX(0); }
 		.mobile-panel .brand { margin-bottom: 26px; }
 		.mobile-panel a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); color: #2f3430; font-size: 14px; font-weight: 600; }
 		.mobile-panel a:last-child { border-bottom: 0; }
-		.mobile-panel .nav-cta { width: 100%; margin-top: 18px; color: white; border-bottom: 0; }
+		.mobile-panel .nav-cta { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 46px; margin-top: 18px; padding: 0 19px; border-bottom: 0; border-radius: 40px; text-align: center; color: white; }
 
 		.hero { min-height: 600px; display: grid; grid-template-columns: .92fr 1.08fr; background: var(--cream); overflow: hidden; }
 		.hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 74px max(40px, calc((100vw - 1160px) / 2)); padding-right: 40px; animation: reveal .7s ease both; }
@@ -875,7 +875,7 @@
 				<a href="#reservasi">Reservasi</a>
 				<a href="#lokasi">Lokasi</a>
 			</div>
-			<a class="nav-cta" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan Sekarang <span aria-hidden="true">↗</span></a>
+			<a class="nav-cta" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan Sekarang <span aria-hidden="true">↗&#xFE0E;</span></a>
 			<button class="mobile-menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
 				<span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span>
 			</button>
@@ -891,7 +891,7 @@
 		<a href="#cerita">Cerita Kami</a>
 		<a href="#reservasi">Reservasi &amp; Pesan Banyak</a>
 		<a href="#lokasi">Lokasi</a>
-		<a class="nav-cta" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan Sekarang <span aria-hidden="true">↗</span></a>
+		<a class="nav-cta" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan Sekarang <span aria-hidden="true">↗&#xFE0E;</span></a>
 	</div>
 
 	<main>
@@ -926,9 +926,9 @@
 			<aside class="about-card" aria-label="Media sosial dan kontak">
 				<h3>Ikuti &amp; hubungi kami</h3>
 				<p>Lihat menu terbaru dan suasana kafe setiap hari.</p>
-				<a class="social" href="https://www.instagram.com/kopipantura2?stkn=MWh1dnV6YWVpNGg4Zw==" target="_blank" rel="noopener"><i>IG</i><span><b>Instagram</b>@kopipantura2</span><em aria-hidden="true">↗</em></a>
-				<a class="social" href="https://www.tiktok.com/@kopi.pantura?_r=1&amp;_t=ZS-9AN7jXkfwvP" target="_blank" rel="noopener"><i>TT</i><span><b>TikTok</b>@kopi.pantura</span><em aria-hidden="true">↗</em></a>
-				<a class="social" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura" target="_blank" rel="noopener"><i>WA</i><span><b>WhatsApp</b>0852-3452-6625</span><em aria-hidden="true">↗</em></a>
+				<a class="social" href="https://www.instagram.com/kopipantura2?stkn=MWh1dnV6YWVpNGg4Zw==" target="_blank" rel="noopener"><i>IG</i><span><b>Instagram</b>@kopipantura2</span><em aria-hidden="true">↗&#xFE0E;</em></a>
+				<a class="social" href="https://www.tiktok.com/@kopi.pantura?_r=1&amp;_t=ZS-9AN7jXkfwvP" target="_blank" rel="noopener"><i>TT</i><span><b>TikTok</b>@kopi.pantura</span><em aria-hidden="true">↗&#xFE0E;</em></a>
+				<a class="social" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura" target="_blank" rel="noopener"><i>WA</i><span><b>WhatsApp</b>0852-3452-6625</span><em aria-hidden="true">↗&#xFE0E;</em></a>
 			</aside>
 		</section>
 
@@ -971,7 +971,7 @@
 					<p>Pesanan diterima lewat WhatsApp. Sebutkan menu dan jumlahnya, nanti tim kami yang bantu.</p>
 				</div>
 				<div class="gallery-cta-actions">
-					<a class="button" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan via WhatsApp <span aria-hidden="true">↗</span></a>
+					<a class="button" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan via WhatsApp <span aria-hidden="true">↗&#xFE0E;</span></a>
 				</div>
 			</div>
 		</section>
@@ -998,7 +998,7 @@
 					</div>
 					<div class="gallery-cta-actions">
 						<a class="button" href="#reservasi">Reservasi Tempat <span aria-hidden="true">→</span></a>
-						<a class="ghost" href="https://www.instagram.com/kopipantura2?stkn=MWh1dnV6YWVpNGg4Zw==" target="_blank" rel="noopener">Lihat Instagram <span aria-hidden="true">↗</span></a>
+						<a class="ghost" href="https://www.instagram.com/kopipantura2?stkn=MWh1dnV6YWVpNGg4Zw==" target="_blank" rel="noopener">Lihat Instagram <span aria-hidden="true">↗&#xFE0E;</span></a>
 					</div>
 				</div>
 			</div>
@@ -1033,7 +1033,7 @@
 						<li><b>Datang tepat waktu</b> dan sebutkan nama reservasi ke kasir.</li>
 					</ol>
 					<div class="notes"><strong>Ketentuan</strong><ul><li>Reservasi minimal 1 hari sebelumnya.</li><li>Meja ditahan 15 menit dari jam yang dipesan.</li><li>Kapasitas maksimal 40 orang.</li></ul></div>
-					<a class="button" style="margin-top:22px" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20ingin%20reservasi%20tempat." target="_blank" rel="noopener">Reservasi via WhatsApp <span aria-hidden="true">↗</span></a>
+					<a class="button" style="margin-top:22px" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20ingin%20reservasi%20tempat." target="_blank" rel="noopener">Reservasi via WhatsApp <span aria-hidden="true">↗&#xFE0E;</span></a>
 				</div>
 
 				<div class="panel">
@@ -1046,7 +1046,7 @@
 						<li><b>Bayar DP 50%</b>, pelunasan saat pesanan diambil atau diantar.</li>
 					</ol>
 					<div class="notes"><strong>Ketentuan</strong><ul><li>Minimal pesanan 10 porsi.</li><li>Pesan paling lambat H-2 (di atas 50 porsi: H-3).</li><li>Tersedia ambil di tempat atau antar (biaya sesuai jarak).</li><li>Diskon khusus untuk pesanan di atas 30 porsi.</li></ul></div>
-					<a class="button outline" style="margin-top:22px" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20ingin%20pesan%20dalam%20jumlah%20banyak." target="_blank" rel="noopener">Pesan Banyak via WhatsApp <span aria-hidden="true">↗</span></a>
+					<a class="button outline" style="margin-top:22px" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20ingin%20pesan%20dalam%20jumlah%20banyak." target="_blank" rel="noopener">Pesan Banyak via WhatsApp <span aria-hidden="true">↗&#xFE0E;</span></a>
 				</div>
 			</div>
 		</section>
@@ -1065,7 +1065,7 @@
 			</div>
 			<a class="map-panel" href="https://maps.app.goo.gl/d7G9LcfWsi45aKGV8" target="_blank" rel="noopener" aria-label="Buka lokasi Kedai Kopi Pantura di Google Maps">
 				<span class="map-pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-				<span class="map-label">Kedai Kopi Pantura · Buka di Maps ↗</span>
+				<span class="map-label">Kedai Kopi Pantura · Buka di Maps ↗&#xFE0E;</span>
 			</a>
 		</section>
 	</main>
@@ -1077,8 +1077,8 @@
 				<h2>Yuk, mampir dan ngopi bareng kami.</h2>
 			</div>
 			<div class="ft-cta-actions">
-				<a class="ft-btn" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan via WhatsApp <span aria-hidden="true">↗</span></a>
-				<a class="ft-btn ghost" href="https://maps.app.goo.gl/d7G9LcfWsi45aKGV8" target="_blank" rel="noopener">Buka di Maps <span aria-hidden="true">↗</span></a>
+				<a class="ft-btn" href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan via WhatsApp <span aria-hidden="true">↗&#xFE0E;</span></a>
+				<a class="ft-btn ghost" href="https://maps.app.goo.gl/d7G9LcfWsi45aKGV8" target="_blank" rel="noopener">Buka di Maps <span aria-hidden="true">↗&#xFE0E;</span></a>
 			</div>
 		</div>
 
@@ -1130,7 +1130,7 @@
 					<a href="https://wa.me/6285234526625?text=Halo%20Kedai%20Kopi%20Pantura%2C%20saya%20mau%20pesan." target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-.8.8a3.5 3.5 0 0 1-1.5-1.5l.8-.8-1-2L9 9.5Z"/></svg></a>
 					<a href="https://maps.app.goo.gl/d7G9LcfWsi45aKGV8" target="_blank" rel="noopener" aria-label="Google Maps" title="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
 				</div>
-				<a class="ft-mail" href="https://www.instagram.com/kopipantura2?stkn=MWh1dnV6YWVpNGg4Zw==" target="_blank" rel="noopener">@kopipantura2 <span aria-hidden="true">↗</span></a>
+				<a class="ft-mail" href="https://www.instagram.com/kopipantura2?stkn=MWh1dnV6YWVpNGg4Zw==" target="_blank" rel="noopener">@kopipantura2 <span aria-hidden="true">↗&#xFE0E;</span></a>
 			</div>
 		</div>
 
